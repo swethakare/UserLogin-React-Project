@@ -54,9 +54,9 @@ function Forgotpassword(userCredentials) {
             setInvalidError(false);
             const values = Object.values(userCredentials)
             const emails = values.map(valuesList => valuesList[0])
-            if (emails.includes(email)){
+            if (emails.includes(email)) {
                 setEmailNotFoundError(false);
-            }else{
+            } else {
                 setEmailNotFoundError(true);
             }
         }
@@ -82,7 +82,7 @@ function Forgotpassword(userCredentials) {
             ) {
                 // Password is valid, continue with form submission or additional actions
                 navigate('/Verified');
-            }else{
+            } else {
                 setValidatepass(true);
             }
         }
@@ -124,7 +124,7 @@ function Forgotpassword(userCredentials) {
                         <p>Please enter a valid format for the email address</p>
                     </Alert>
                 )}
-                { emailNotFoundError && (
+                {emailNotFoundError && (
                     <Alert variant="danger" onClose={handleAlertClose} dismissible>
                         <Alert.Heading>Oh snap!</Alert.Heading>
                         <p>User not found</p>
