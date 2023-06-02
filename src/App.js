@@ -18,12 +18,7 @@ function App(){
     </Routes>
     
   </Router>);
-  // <Container className="p-10">
-
-  //   <Loginform/>
-    
-  // </Container>
-
+ 
 }
 
 export default App;
