@@ -1,0 +1,15 @@
+.valid{
+    color:green; 
+    
+   }
+.invalid{
+       color:red;
+}
+.tick-image{
+    height:20px;
+    width: 20px;
+}
+.wrong-image{
+    height:20px;
+    width: 20px;
+}

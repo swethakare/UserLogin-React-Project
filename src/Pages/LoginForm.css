@@ -1,0 +1,24 @@
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, lightblue, lightpink);
+}
+
+.card {
+  width: 400px; 
+  padding: 16px;
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-family: "Arial";
+  font-size: 16px; 
+  color: #333; 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px; 
+}
