@@ -96,12 +96,7 @@ function Forgotpassword() {
         setError(false);
         setInvalidError(false);
         setEmailNotFoundError(false);
-        setPwdcheck({
-            capcheck: false,
-            lengthcheck: false,
-            numcheck: false,
-            splcharcheck: false,
-        }); // on close all these states are set to false only then on re-clicking the submit button the error will be raised else the error is not raised due to the previous state that is maintaine during the session.
+        // on close all these states are set to false only then on re-clicking the submit button the error will be raised else the error is not raised due to the previous state that is maintaine during the session.
     };
     return (
         <div className="login-form-container">
