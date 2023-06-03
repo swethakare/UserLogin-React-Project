@@ -6,7 +6,7 @@ const PWDRequisite = ({ capflag, lenflag, numflag, splflag }) => {
   return (
     <div>
       <p className={capflag}>
-        <i className={capflag}/>
+        <i className={capflag} />
         {capflag === 'valid' ? (
           <img src={tickImage} alt="Valid" className="tick-image" />
         ) : (
@@ -16,7 +16,7 @@ const PWDRequisite = ({ capflag, lenflag, numflag, splflag }) => {
       </p>
 
       <p className={lenflag}>
-      {lenflag === 'valid' ? (
+        {lenflag === 'valid' ? (
           <img src={tickImage} alt="Valid" className="tick-image" />
         ) : (
           <img src={wrongImage} alt="Invalid" className="wrong-image" />
@@ -24,7 +24,7 @@ const PWDRequisite = ({ capflag, lenflag, numflag, splflag }) => {
         Password should be 8 characters long
       </p>
       <p className={numflag}>
-      {numflag === 'valid' ? (
+        {numflag === 'valid' ? (
           <img src={tickImage} alt="Valid" className="tick-image" />
         ) : (
           <img src={wrongImage} alt="Invalid" className="wrong-image" />
@@ -32,7 +32,7 @@ const PWDRequisite = ({ capflag, lenflag, numflag, splflag }) => {
         Must contain at least 1 number
       </p>
       <p className={splflag}>
-      {splflag === 'valid' ? (
+        {splflag === 'valid' ? (
           <img src={tickImage} alt="Valid" className="tick-image" />
         ) : (
           <img src={wrongImage} alt="Invalid" className="wrong-image" />

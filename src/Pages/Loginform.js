@@ -5,14 +5,15 @@ import React, { useState } from 'react';
 import './LoginForm.css';
 import { useNavigate } from 'react-router-dom';
 import { userCredentials } from './utils';
+// userCredentials contains a few hardcoded values of users along with their email id and password
 const LoginForm = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [showError, setShowError] = useState(false);
-  const [showInvalidError, setShowIError] = useState(false);
-  const [showButton, setShowButton] = useState(true);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [showFgButton, setShowFgButton] = useState(true);
+  const [username, setUsername] = useState(''); // saves the current user name that has been inputted by the user
+  const [password, setPassword] = useState(''); // saves the current password that has been entered by the user
+  const [showError, setShowError] = useState(false); // if user name is not entered and on clicking the submit button then error occurs
+  const [showInvalidError, setShowIError] = useState(false); // if user name and password soesnot exist in the userCredentials then raise an error.
+  const [showButton, setShowButton] = useState(true); // it is set to hide the buttons when an error occurs
+  const [showSuccess, setShowSuccess] = useState(false); // it is set to show sucess message on loggin in with vslid user id and password
+  const [showFgButton, setShowFgButton] = useState(true); // it is set to hide the forgot password button when an error occurs.
   let navigate = useNavigate();
 
 
@@ -22,12 +23,12 @@ const LoginForm = () => {
     if (!username || !password) {
       setShowButton(false);
       setShowFgButton(false);
-      setShowError(true);
+      setShowError(true);// if user id and password is null error vars are set and buttons are hidden
     } else if (Object.keys(userCredentials).includes(username) && password === userCredentials[username][1]) {
       setShowSuccess(true);
       setShowButton(false);
       setShowFgButton(false);
-      alert("Login authenticated");
+      alert("Login authenticated");// raises an alert message if user credentials are valid on successfull authorization
 
     } else {
       setShowButton(false);
@@ -38,8 +39,9 @@ const LoginForm = () => {
   const handleAlertClose = () => {
     setShowError(false);
     setShowIError(false);
-    setShowButton(true); // Reset login buttons state to true after closing the error alert
-    setShowFgButton(true); // Reset ForgotPassword buttons state to true after closing the error alert
+    setShowButton(true);
+    setShowFgButton(true);
+    // on close all these states are set to false only then on re-clicking the submit button the error will be raised else the error is not raised due to the previous state that is maintaine during the session.
   };
   return (
     <div className="login-form-container">
@@ -70,7 +72,7 @@ const LoginForm = () => {
           </Alert>
         )}
 
-        {/* username is user1, password is 123456; an alert message appears when showSucess flag is set to true */}
+        {/* an alert message appears when showSucess flag is set to true */}
         {showSuccess && (
           <Alert variant="success">
             <Alert.Heading>User Verified Successfully!</Alert.Heading>
