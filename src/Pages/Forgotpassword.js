@@ -22,6 +22,8 @@ function Forgotpassword() {
         numcheck: false,
         splcharcheck: false,
     }); // chesks the strength of the password
+    const values = Object.values(userCredentials)
+    const emails = values.map(valuesList => valuesList[0])
     const navigate = useNavigate();
     const handleOnFocus = () => {
         setValidatepass(true); // on focus it checks pasword strength
@@ -51,8 +53,7 @@ function Forgotpassword() {
             setInvalidError(true);
         } else {
             setInvalidError(false);// if inputted format of the email is vcalid then check if the email belongs to a registed user else raise an error
-            const values = Object.values(userCredentials)
-            const emails = values.map(valuesList => valuesList[0])
+           
             if (emails.includes(email)) {
                 setEmailNotFoundError(false);
             } else {
@@ -72,12 +73,13 @@ function Forgotpassword() {
         } else {
             setError(false);
             isValidEmail();// valid email check
+            console.log(emailNotFoundError);
             if (
                 pwdcheck.capcheck &&
                 pwdcheck.lengthcheck &&
                 pwdcheck.numcheck &&
                 pwdcheck.splcharcheck &&
-                email
+                email && emails.includes(email)
             ) {
                 // Password and email are verified then, continue with form submission 
                 navigate('/Verified');

@@ -22,17 +22,17 @@ const LoginForm = () => {
     e.preventDefault();
     if (!username || !password) {
       setShowButton(false);
-      setShowFgButton(false);
+      //setShowFgButton(false);
       setShowError(true);// if user id and password is null error vars are set and buttons are hidden
     } else if (Object.keys(userCredentials).includes(username) && password === userCredentials[username][1]) {
       setShowSuccess(true);
       setShowButton(false);
-      setShowFgButton(false);
+      //setShowFgButton(false);
       alert("Login authenticated");// raises an alert message if user credentials are valid on successfull authorization
 
     } else {
       setShowButton(false);
-      setShowFgButton(false);
+      //setShowFgButton(false);
       setShowIError(true);
     }
   };
@@ -40,7 +40,7 @@ const LoginForm = () => {
     setShowError(false);
     setShowIError(false);
     setShowButton(true);
-    setShowFgButton(true);
+    //setShowFgButton(true);
     // on close all these states are set to false only then on re-clicking the submit button the error will be raised else the error is not raised due to the previous state that is maintaine during the session.
   };
   return (
@@ -84,7 +84,8 @@ const LoginForm = () => {
         </div>
 
         <div className="button-container">
-          {showFgButton && <Button type="submit" variant='primary' onClick={() => { navigate('/Forgotpassword') }}> Forgot Password</Button>}
+          {/* {showFgButton && <Button type="submit" variant='primary' onClick={() => { navigate('/Forgotpassword') }}> Forgot Password</Button>} */}
+          <Button type="submit" variant='primary' onClick={() => { navigate('/Forgotpassword') }}> Forgot Password</Button>
         </div>
       </form>
     </div>
