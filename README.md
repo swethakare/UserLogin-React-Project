@@ -1,2 +1,41 @@
 # UserLogin-React-Project
 This project has been created as a part of my interview process at crocodile solutions
+
+Functional implementation:
+First screen is a Sign in screen 
+
+Used a mocked userid and password (hardcoded the values)
+Sign in screen should has: 
+Textbox: User Name, password 
+Button: login + On Click implementation as follows
+
+  o OnClick verify the following: 
+
+  o Userid and/or Password is not blank otherwise an alert message stating issue.
+
+  o Userid and/or Password does not match to then mocked Userid/password an alert message "Invalid userid/password"
+
+  o Userid and Password is match to the mock Userid/password pop up a Confirm message - "login is authenticated"
+
+Clickable link : Forgot password
+On clicking Forgot password direct us to Second screen
+Second screen: Forgot password.
+
+  ·  Forgot password screen should have 
+
+  ·  Text box: email address (Valid email validation)
+
+  ·  password (validate strong password)
+
+  ·  Button: Change 
+
+On clicking the "Change" button, pop up the third screen 
+Third Pop 
+
+  ·  Pop should have 2 elements 
+
+  ·  Icon indication success
+
+  ·  Text: "Password was changed!!" 
+
+
