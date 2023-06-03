@@ -14,12 +14,11 @@ const LoginForm = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showFgButton, setShowFgButton] = useState(true);
   let navigate = useNavigate();
-  
+
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!username || !password) {
       setShowButton(false);
       setShowFgButton(false);
@@ -30,7 +29,7 @@ const LoginForm = () => {
       setShowFgButton(false);
       alert("Login authenticated");
 
-    } else  {
+    } else {
       setShowButton(false);
       setShowFgButton(false);
       setShowIError(true);
@@ -54,8 +53,8 @@ const LoginForm = () => {
           <Form.Label>Password:</Form.Label>
           <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </Form.Group>
-        
-{/* if user clicks on login button without entring the username or password */}
+
+        {/* if user clicks on login button without entring the username or password */}
         {showError && (
           <Alert variant="danger" onClose={handleAlertClose} dismissible>
             <Alert.Heading>Oh snap!</Alert.Heading>
@@ -63,7 +62,7 @@ const LoginForm = () => {
           </Alert>
         )}
 
-{/* Invalid error message appears if user tries to input some oher password or username */}
+        {/* Invalid error message appears if user tries to input some oher password or username */}
         {showInvalidError && (
           <Alert variant="danger" onClose={handleAlertClose} dismissible>
             <Alert.Heading>Oh snap!</Alert.Heading>
@@ -71,7 +70,7 @@ const LoginForm = () => {
           </Alert>
         )}
 
-{/* username is user1, password is 123456; an alert message appears when showSucess flag is set to true */}
+        {/* username is user1, password is 123456; an alert message appears when showSucess flag is set to true */}
         {showSuccess && (
           <Alert variant="success">
             <Alert.Heading>User Verified Successfully!</Alert.Heading>
