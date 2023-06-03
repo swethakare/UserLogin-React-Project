@@ -1,6 +1,16 @@
 # UserLogin-React-Project
 This project has been created as a part of my interview process at crocodile solutions
 
+Access this login page directly using the following link:
+https://mason.gmu.edu/~skare/build/index.html
+
+UserID, Password and registered email address has been hardcoded in the utils.js file the harcoded values are:
+ userCredentials = {
+    user1: ["swetha@gmu.edu", "pass1"],
+    user2: ["preku@gmu.edu", "pass2"],
+    user3: ["uday@gmu.edu", "pass3"]
+  };
+  
 Functional implementation:
 First screen is a Sign in screen 
 
@@ -37,5 +47,4 @@ Third Pop
   ·  Icon indication success
 
   ·  Text: "Password was changed!!" 
-
 
