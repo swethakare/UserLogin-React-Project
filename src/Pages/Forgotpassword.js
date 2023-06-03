@@ -26,7 +26,7 @@ function Forgotpassword() {
     const emails = values.map(valuesList => valuesList[0])
     const navigate = useNavigate();
     const handleOnFocus = () => {
-        setValidatepass(true); // on focus it checks pasword strength
+        setValidatepass(true); // on focus it checks pasword strength.
     };
     const handleOnBlur = () => {
         setValidatepass(false);
