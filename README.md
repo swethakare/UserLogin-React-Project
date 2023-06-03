@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+This project has been created as a part of my interview process at crocodile solutions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Access this login page directly using the following link: https://mason.gmu.edu/~skare/build/index.html
 
-## Available Scripts
+UserID, Password and registered email address has been hardcoded in the utils.js file the harcoded values are: userCredentials = { user1: ["swetha@gmu.edu", "pass1"], user2: ["preku@gmu.edu", "pass2"], user3: ["uday@gmu.edu", "pass3"] };
 
-In the project directory, you can run:
+Functional implementation: First screen is a Sign in screen
 
-### `npm start`
+Used a mocked userid and password (hardcoded the values) Sign in screen should has: Textbox: User Name, password Button: login + On Click implementation as follows
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+o OnClick verify the following:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+o Userid and/or Password is not blank otherwise an alert message stating issue.
 
-### `npm test`
+o Userid and/or Password does not match to then mocked Userid/password an alert message "Invalid userid/password"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+o Userid and Password is match to the mock Userid/password pop up a Confirm message - "login is authenticated"
 
-### `npm run build`
+Clickable link : Forgot password On clicking Forgot password direct us to Second screen Second screen: Forgot password.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+· Forgot password screen should have
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+· Text box: email address (Valid email validation)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+· password (validate strong password)
 
-### `npm run eject`
+· Button: Change
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+On clicking the "Change" button, pop up the third screen Third Pop
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+· Pop should have 2 elements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+· Icon indication success
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+· Text: "Password was changed!!"
