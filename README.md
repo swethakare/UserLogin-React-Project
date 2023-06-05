@@ -5,6 +5,8 @@ Access this login page directly using the following link:
 https://mason.gmu.edu/~skare/build/index.html
 
 UserID, Password and registered email address has been hardcoded in the utils.js file the harcoded values are:
+username corresponds to user1, user2, user3
+their corresponding passwords are pass1, pass2, pass3
  userCredentials = {
     user1: ["swetha@gmu.edu", "pass1"],
     user2: ["preku@gmu.edu", "pass2"],
